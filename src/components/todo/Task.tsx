@@ -5,7 +5,7 @@ import {useState} from "react";
 import DeleteIcon from '@mui/icons-material/Delete';
 import ModeIcon from '@mui/icons-material/Mode';
 import SaveIcon from '@mui/icons-material/Save';
-import {FormControl, InputLabel, MenuItem, Select, TextField} from "@mui/material";
+import { FormControl, InputLabel, MenuItem, Select, TextField} from "@mui/material";
 import {SubmitHandler, useForm} from "react-hook-form";
 
 interface TaskProps {
@@ -57,7 +57,8 @@ const Task = ({todo, index}: TaskProps) => {
                             variant="outlined"
                             placeholder='Enter the title'/>
                         {!!errors.title?.type && <p className='errorText'>Field cannot be empty</p>}
-                        <TextField error={!!errors.text?.type}
+                        <TextField
+                            error={!!errors.text?.type}
                                    defaultValue={todo.text}
                                    {...register("text", {required: true})}
                                    variant="outlined"

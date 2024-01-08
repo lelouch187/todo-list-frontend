@@ -45,13 +45,11 @@
     gap: 10px;
 }
 input{
-    color: #fff !important;
+    color: gray !important;
 }
-
-select {
-    color: #fff !important;
+input::placeholder{
+    color: black !important;
 }
-
 
 
 @media (max-width: 680px) {
