@@ -14,11 +14,12 @@ const TodoList = () => {
     if (isLoading || isFetching) {
         return <div>Загрузка...</div>
     }
-console.log(todos)
+
+
     return (
         <div>
-            {todos && todos.map(todo=>{
-               return <Task key={todo._id} todo={todo} />
+            {todos && todos.map((todo, i)=>{
+               return <Task key={todo._id} todo={todo} index={i} />
             })}
         </div>
     );

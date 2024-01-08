@@ -21,7 +21,27 @@ export const todoApi = createApi({
             }),
             invalidatesTags: ['Todo'],
         }),
+        deleteTask: builder.mutation<string, {id:string}>({
+            query: (body:{id:string}) => ({
+                url: '',
+                method: 'DELETE',
+                body,
+            }),
+            invalidatesTags: ['Todo'],
+        }),
+        updateTask: builder.mutation<Todo, Todo>({
+            query: (body) => ({
+                url: '',
+                method: 'PUT',
+                body,
+            }),
+            invalidatesTags: ['Todo'],
+        }),
     }),
 })
 
-export const { useGetAllTodosQuery, useAddTaskMutation } = todoApi
+export const { useGetAllTodosQuery,
+    useAddTaskMutation,
+    useDeleteTaskMutation,
+    useUpdateTaskMutation
+} = todoApi

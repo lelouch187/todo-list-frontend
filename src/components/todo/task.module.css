@@ -1,0 +1,61 @@
+.task{
+    max-width: 100%;
+    border: 2px solid #646cff;
+    padding: 10px 20px;
+    margin: 10px 0px;
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    position: relative;
+}
+.task.done h2{
+    text-decoration: line-through;
+}
+.task.done p{
+    text-decoration: line-through;
+}
+
+.status{
+    display: inline-block;
+    padding: 5px;
+    height: max-content;
+    margin-right: 25px;
+}
+
+.status.await{
+    background-color: aquamarine;
+    color: black;
+}
+.status.progress{
+    background-color: darkorange;
+    color: black;
+}
+.status.done{
+    background-color: darkgrey;
+    color: black;
+}
+.wrapper{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.form{
+    display: flex;
+    gap: 10px;
+}
+input{
+    color: #fff !important;
+}
+
+select {
+    color: #fff !important;
+}
+
+
+
+@media (max-width: 680px) {
+    .task{
+        font-size: 12px;
+    }
+}
