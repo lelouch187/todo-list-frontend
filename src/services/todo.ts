@@ -6,7 +6,7 @@ import {Todo} from "../types/todo.ts";
 // Define a service using a base URL and expected endpoints
 export const todoApi = createApi({
     reducerPath: 'todoApi',
-    baseQuery: fetchBaseQuery({ baseUrl: import.meta.env.VITE_BASE_URL}),
+    baseQuery: fetchBaseQuery({ baseUrl: import.meta.env.VITE_BASE_URL|| 'http://localhost:7777/'}),
     tagTypes: ['Todo'],
     endpoints: (builder) => ({
         getAllTodos: builder.query<Todo[], string>({
